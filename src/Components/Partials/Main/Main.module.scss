@@ -2,9 +2,31 @@
 .wrapper {
 	width: 100%;
 	max-width: 1024px;
-	margin: 0 auto;
+	margin: auto;
+	background-color: rgb(13, 137, 141);
 
 	p {
 		color: white;
+		margin-left: 1%;
 	}
+
+}
+
+ul {
+	padding-bottom: 1em;
+}
+
+form {
+	
+	margin-left: 1%;
+}
+
+
+h2 {
+	margin-left: 1%;
+}
+
+
+input {
+	margin-left: 1%;
 }

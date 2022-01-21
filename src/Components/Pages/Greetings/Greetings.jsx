@@ -6,7 +6,7 @@ export const Greetings = () => {
 	return (
 		<>
 			<h2>Hej mit navn er {name}</h2>
-			<input type="text" onInput={e => setName(e.target.value)}/>
+			<input type="text" placeholder="skriv dit navn her" onInput={e => setName(e.target.value)}/>
 		</>
 	)
 }
