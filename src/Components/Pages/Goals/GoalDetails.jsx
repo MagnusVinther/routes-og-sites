@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 // import { useHistory } from 'react-router-dom';
 import axios from 'axios'
 // import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ import axios from 'axios'
 export const GoalDetails = () => {
     const [ goal, setGoal ] = useState({});
     const { goal_id } = useParams();
-    // let history = useHistory();
+    const Navigate = useNavigate();
     
 
     useEffect(() => {
@@ -22,15 +22,23 @@ export const GoalDetails = () => {
         getData() // getData bliver kaldt
     }, [goal_id]) 
 
-    console.log(goal);
+    // console.log(goal);
 
     return (
         <>  
             <br />
             <br />
             <br />
-            {/* <button onClick={history.goBack}>Gå tilbage til liste</button> */}
+            <button className="backBtn" onClick={() => Navigate(-1)}>Gå tilbage til liste</button>
+            <br />
+            <br />
+            <img src={goal.image} alt={goal.title} />
             <h1>{goal.title}</h1>
+            <h3>{goal.byline}</h3>
+            <p>{goal.description}</p>
+            <br />
+            <br />
+            <br />
         </>
     )
 }

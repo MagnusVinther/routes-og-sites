@@ -1,11 +1,12 @@
 import styles from './Gallery.module.scss'
+import arrImages from '../../Assets/data/arrGalleryImages';
 
 export const Gallery = props => {
 	console.log(props);
 
 	return (
 		<div className={styles.gallerywrapper}>
-			{props && props.imageList && props.imageList.map(item => {
+			{arrImages.map(item => {
 				return (
 					<figure>
 					<figcaption>
